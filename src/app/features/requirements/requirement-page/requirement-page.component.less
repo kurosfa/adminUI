@@ -1,0 +1,38 @@
+@import '~@taiga-ui/core/styles/taiga-ui-local';
+
+:host {
+	display: block;
+}
+
+.container {
+	margin-top: 60px;
+}
+
+.item {
+	display: flex;
+	margin-top: 20px;
+}
+
+.name {
+	.text-body-m();
+	flex-shrink: 0;
+	width: 208px;
+	margin-right: 16px;
+	color: var(--tui-text-02);
+}
+
+.description {
+	.text-body-m();
+	align-items: center;
+	flex-grow: 1;
+	min-width: 0;
+	color: var(--tui-text-01);
+
+	&_empty {
+		color: var(--tui-text-02);
+	}
+
+	&.word-break {
+		word-break: break-word;
+	}
+}

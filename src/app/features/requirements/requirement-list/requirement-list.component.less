@@ -1,0 +1,34 @@
+@import '~@taiga-ui/core/styles/taiga-ui-local';
+
+:host {
+	display: block;
+}
+
+.container {
+	margin-top: 32px;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.item {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 20px;
+	padding: 12px;
+	border: 1px solid var(--tui-base-03);
+	border-radius: 8px;
+	box-sizing: border-box;
+}
+
+.name {
+	.text-body-m();
+	flex-shrink: 0;
+	width: 208px;
+	margin-right: 16px;
+	color: var(--tui-text-01);
+}

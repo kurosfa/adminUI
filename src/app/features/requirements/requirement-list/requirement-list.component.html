@@ -1,0 +1,31 @@
+<div class="tui-row tui-row_adaptive container">
+	<div
+		class="tui-col_xs-12 tui-col_s-12 tui-col_sm-12 tui-col_md-12 tui-col_lg-12"
+	>
+		<div class="header">
+			<h2 class="tui-text_h2">Список требований</h2>
+			<button
+				tuiButton
+				type="button"
+				appearance="outline"
+				icon="tuiIconPlus"
+				(click)="service.goToCreateFeature()"
+			>
+				Создать
+			</button>
+		</div>
+
+		<ng-container *tuiLet="service.requirements$ | async as features">
+			<div *ngFor="let feature of features" class="tui-space_top-2 tui-space_bottom-2">
+				<a class="item" (click)="service.goToFeature(feature.id)">
+					<div class="name">{{feature.name}}</div>
+					<tui-badge
+						[status]="getStatus(feature.status)"
+						[value]="feature.status"
+						class="tui-space_left-2"
+					></tui-badge>
+				</a>
+			</div>
+		</ng-container>
+	</div>
+</div>
